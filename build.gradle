@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.teamtreehouse'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:5.1.0.Final'
+    implementation 'com.h2database:h2:1.4.191'
+    implementation 'javax.transaction:jta:1.1'
+//    what chatGPT recommended below
+//    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+//    implementation 'com.sun.xml.bind:jaxb-impl:2.3.1'
+//    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
